@@ -6,7 +6,6 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
-import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Account from './pages/Accounts/Accounts'
 // components
@@ -66,15 +65,6 @@ function App(): JSX.Element {
         <Route
           path="/login"
           element={<Login handleAuthEvt={handleAuthEvt} />}
-        />
-        <Route
-          path="/profiles"
-          element={
-            <ProtectedRoute user={user}>
-              <Profiles profiles={profiles}
-              />
-            </ProtectedRoute>
-          }
         />
         <Route
           path="/change-password"
