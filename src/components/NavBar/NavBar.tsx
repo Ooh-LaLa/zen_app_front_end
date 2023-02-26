@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 // types
 import { User } from '../../types/models'
 
+
 interface NavBarProps {
   user: User | null;
   handleLogout: () => void;
@@ -14,7 +15,7 @@ const NavBar = (props: NavBarProps): JSX.Element => {
   
   return (
     <nav>
-      <NavLink to="/account">{user.name}</NavLink>
+      <NavLink to="/account">{user?.name}</NavLink>
       {user ?
         <ul>
           <li><NavLink to="/">Home</NavLink></li>

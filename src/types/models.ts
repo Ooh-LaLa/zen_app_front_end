@@ -20,3 +20,12 @@ export interface User {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface Zen_Quote {
+  quote: string;
+  profileId: number;
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
