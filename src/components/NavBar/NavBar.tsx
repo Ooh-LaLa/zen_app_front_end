@@ -20,6 +20,8 @@ const NavBar = (props: NavBarProps): JSX.Element => {
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
           <br></br>
+          <li><NavLink to="/new">Add Zen Quote</NavLink></li>
+          <br></br>
           <li><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></li>
         </ul>
       :

@@ -16,7 +16,7 @@ interface AccountProps {
 
 const Account =  ({ user, handleLogout }: AccountProps): JSX.Element => {
   // const { user } = props
-  const handleDeleteAccount = async(): Promise<void> => {
+  const handleDeleteAccount = async(): Promise<void>  => {
     await authService.deleteAccount()
     handleLogout()
   }
@@ -26,9 +26,7 @@ const Account =  ({ user, handleLogout }: AccountProps): JSX.Element => {
 
       <a href="/change-password">Change Password</a>
 <br></br>
-      {/* <h1>Meow Meow <br/> Beans</h1>
-      <img src={logo} alt="A meow meow bean" /> */}
-
+    
       { user && 
         <button onClick={handleDeleteAccount}>
           DELETE ACCOUNT

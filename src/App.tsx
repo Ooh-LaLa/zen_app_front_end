@@ -8,7 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Account from './pages/Accounts/Accounts'
-
+import NewZenQuote from './pages/NewZenQuote/NewZenQuote'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
@@ -68,6 +68,24 @@ function App(): JSX.Element {
     if (user) fetchQuotes()
   }, [user])
 
+
+  useEffect((): void => {
+    const newQuote = async (): Promise<void> => {
+      try {
+        const quoteData: Zen_Quote[] = await quoteService.createZenQuote()
+        setQuotes(quoteData)
+        console.log(quotes, "BIG MESSAGE");
+        
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    if (user) newQuote()
+  }, [user])
+
+
+
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -82,6 +100,7 @@ function App(): JSX.Element {
           path="/login"
           element={<Login handleAuthEvt={handleAuthEvt} />}
         />
+   <Route path="/new" element={<ProtectedRoute user={user} > <NewZenQuote user={user} quotes={quotes}/> </ProtectedRoute>}/>
         <Route
           path="/change-password"
           element={
