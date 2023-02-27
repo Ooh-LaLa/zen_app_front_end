@@ -1,0 +1,128 @@
+#root {
+    background-color: #fcf7ff;
+    min-height: 100vh;
+    color: #07081e;
+  }
+  
+  main {
+    --background: linear-gradient(to bottom right, #dacefc, #6a6ffa);
+  }
+  
+  .navContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcf7ff;
+    box-shadow: 0px 1px 3px #451d9a5c;
+    z-index: 10;
+  }
+  
+  .navContainer > a {
+    padding: 8px 8px;
+    width: 72px;
+  }
+  
+  .navContainer > a > img {
+    height: 56px;
+  }
+  
+  nav {
+    width: 90%;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    height: 72px
+  }
+  
+  .navLeft, #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .navLeft > a, #nav-right > a {
+    color: #07081e;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  .navLeft > a:hover, #nav-right > a:hover {
+    background-color: #eae2ee;
+    color: #07081e;
+    border-radius: 25px;
+  }
+  
+  .navLeft > a:first-child:hover {
+    background-color: none;
+  }
+  
+  .navLeft > a > img {
+    height: 56px;
+  }
+  
+  .navRight > button {
+    z-index: 2;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    margin-right: 16px;
+    color: #07081e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navRight > button:hover {
+    cursor: pointer;
+    background-color: #eae2ee;
+    border-radius: 4px;
+  }
+  
+  #dropdown {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .open-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 72px;
+    padding: 0 32px;
+    height: 250px;
+    width: 205px;
+    background-color: #fcf7ff;
+    box-shadow: 0px 1px 3px #451d9a5c;
+  }
+  
+  .open-dropdown > #nav-right {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .open-dropdown > #nav-left {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .logout-button {
+    background-color: #eae2ee;
+    border-radius: 25px;
+  }
