@@ -69,23 +69,12 @@ function App(): JSX.Element {
   }, [user])
 
 
-  useEffect((): void => {
-    const newQuote = async (): Promise<void> => {
-      try {
-        const quoteData: Zen_Quote[] = await quoteService.createZenQuote()
-        setQuotes(quoteData)
-        console.log(quotes, "BIG MESSAGE");
-        
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    if (user) newQuote()
-  }, [user])
-
-
-
-
+  const handleAddBlog = async (quoteData:string) => {
+    const newQuote = await quoteService.create(quoteData)
+    setQuotes([newQuote, ...quotes])
+    navigate('/new')
+  }
+  
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />

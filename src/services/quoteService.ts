@@ -20,8 +20,23 @@ async function getAllQuotes(): Promise<Zen_Quote[]> {
   }
 }
 
+const create = async (quoteData:string) => {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(quoteData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
-export { getAllQuotes }
+export { getAllQuotes, create }
 
 
 

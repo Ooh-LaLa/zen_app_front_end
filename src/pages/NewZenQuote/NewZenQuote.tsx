@@ -17,10 +17,13 @@ import { User, Profile, Zen_Quote } from '../../types/models'
 interface NewZenQuoteProps {
 	user: User | null;
   quotes?: Zen_Quote[];
+  
+  // quotes?: Zen_Quote[];
 }
 
 const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
-const {quotes} = props
+  
+// const {quotes} = props
 
   return (
     <> 

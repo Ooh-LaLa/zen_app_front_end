@@ -16,13 +16,13 @@ const NavBar = (props: NavBarProps): JSX.Element => {
   const { user, handleLogout } = props
   
   return (
-    <nav className={styles.navContainer}>
+    <nav id={styles.nav} className={styles.navContainer}>
        {user ?
         <>
          <div className="navLeft">
-            <NavLink to="/account">{user?.name}</NavLink>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/new">Add Zen Quote</NavLink>
+            <NavLink className={styles.link} to="/account">{user?.name}</NavLink>
+            <NavLink className={styles.link} to="/">Home</NavLink>
+            <NavLink className={styles.link} to="/new">Add Zen Quote</NavLink>
           </div>
           <div className="navRight">
             <NavLink to="" onClick={handleLogout}>LOG OUT</NavLink>
