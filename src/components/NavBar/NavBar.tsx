@@ -1,43 +1,14 @@
-// npm modules
-import { NavLink } from 'react-router-dom'
+import NavLinksList from "./NavLinkList"
+import { Link } from "react-router-dom"
 
-// types
-import { User } from '../../types/models'
-
-//stylesheets
-import styles from './NavBar.module.css'
-
-interface NavBarProps {
-  user: User | null;
-  handleLogout: () => void;
-}
-
-const NavBar = (props: NavBarProps): JSX.Element => {
-  const { user, handleLogout } = props
-  
+const NavBar = ({ user, handleLogout }) => {
   return (
-    <nav id={styles.nav} className={styles.navContainer}>
-       {user ?
-        <>
-         <div className="navLeft">
-            <NavLink className={styles.link} to="/account">{user?.name}</NavLink>
-            <NavLink className={styles.link} to="/">Home</NavLink>
-            <NavLink className={styles.link} to="/new">Add Zen Quote</NavLink>
-          </div>
-          <div className="navRight">
-            <NavLink to="" onClick={handleLogout}>LOG OUT</NavLink>
-          </div>
-          </>
-          :
-          <>
-          <div className="navRight">
-            <NavLink to="/login">Log In</NavLink>
-            <NavLink to="/signup">Sign Up</NavLink>
-          </div>
-          </>
-      }
-    </nav>
-  );
+    <div id="nav-container">
+      <Link to='/'>
+      </Link>
+      <NavLinksList user={user} handleLogout={handleLogout} />
+    </div>
+  )
 }
 
 export default NavBar

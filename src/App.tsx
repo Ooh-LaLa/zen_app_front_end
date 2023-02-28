@@ -9,8 +9,10 @@ import Landing from './pages/Landing/Landing'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Account from './pages/Accounts/Accounts'
 import NewZenQuote from './pages/NewZenQuote/NewZenQuote'
+import EditZenQuote from './pages/EditZenQuote/EditZenQuote'
+
 // components
-import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/NavBar/NavLinkList'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
@@ -69,12 +71,20 @@ function App(): JSX.Element {
   }, [user])
 
 
-  const handleAddBlog = async (quoteData:string) => {
+  const handleAddQuote = async (quoteData:string) => {
     const newQuote = await quoteService.create(quoteData)
     setQuotes([newQuote, ...quotes])
     navigate('/new')
   }
-  
+
+
+  const handleEditQuote = async (quoteData: QuoteFormData): Promise<void> => {
+    const updateQuote = await quoteService.editQuote(quoteData)
+    setQuotes([updateQuote, ...quotes])
+    navigate('/quotes')
+  }
+
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -87,6 +97,10 @@ function App(): JSX.Element {
         />
         <Route
           path="/login"
+          element={<Login handleAuthEvt={handleAuthEvt} />}
+        />
+        <Route
+          path="/edit/id:"
           element={<Login handleAuthEvt={handleAuthEvt} />}
         />
    <Route path="/new" element={<ProtectedRoute user={user} > <NewZenQuote user={user} quotes={quotes}/> </ProtectedRoute>}/>

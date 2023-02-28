@@ -22,7 +22,7 @@ async function getAllQuotes(): Promise<Zen_Quote[]> {
 
 const create = async (quoteData:string) => {
   try {
-    const res = await fetch(BASE_URL, {
+    const res = await fetch(`${BASE_URL}/new`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
@@ -36,7 +36,38 @@ const create = async (quoteData:string) => {
   }
 }
 
-export { getAllQuotes, create }
+async function editQuote(quoteData: QuoteFormData): Promise<void> {
+  try {
+    const res = await fetch(`${BASE_URL}/edit`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(quoteData)
+    })
+    return await res.json() as Quote
+  } catch (error) {
+    throw error
+  }
+}
+
+async function deleteQuote(id: number): Promise<void> {
+  console.log('QUOTE DELETED!');
+  
+  try {
+    await fetch(`${BASE_URL}/delete`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+  } catch (error) {
+    throw error
+  }
+}
+
+export { getAllQuotes, create, editQuote, deleteQuote }
 
 
 
