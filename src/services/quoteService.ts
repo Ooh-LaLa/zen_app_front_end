@@ -42,7 +42,7 @@ const create = async (quoteData:QuoteFormData): Promise<Quote> => {
 
 async function editQuote(quoteData: QuoteFormData): Promise<void> {
   try {
-    const res = await fetch(`${BASE_URL}/edit`, {
+    const res = await fetch(`${BASE_URL}/myquotes/edit`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
@@ -60,11 +60,11 @@ async function deleteQuote(id: number): Promise<void> {
   console.log('QUOTE DELETED!');
   
   try {
-    await fetch(`${BASE_URL}/delete`, {
+    await fetch(`${BASE_URL}/myquotes/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`
-      }
+      },
     })
   } catch (error) {
     throw error

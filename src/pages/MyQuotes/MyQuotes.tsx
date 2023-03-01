@@ -25,6 +25,7 @@ interface MyQuotesProps {
 
 interface FormElements extends HTMLFormControlsCollection {
   quote: HTMLInputElement
+  id: HTMLInputElement
 }
 
 interface FormElement extends HTMLFormElement {
@@ -39,19 +40,20 @@ const MyQuotes = (props:MyQuotesProps): JSX.Element => {
   
   const handleEditQuote= (e: React.FormEvent<FormElement>) => {
     const newFormData = {quote: e.currentTarget.elements.quote.value}
+    e.preventDefault();
     quoteService.create(newFormData);
     const navigate = useNavigate()
     navigate('/myquotes')
   
     
-    e.preventDefault();
   }
   
   const handleDeleteQuote= (e: React.FormEvent<FormElement>) => {
-    const newFormData = {quote: e.currentTarget.elements.quote.value}
-    quoteService.create(newFormData);
+    console.log(e.currentTarget.elements.id.value);
+    quoteService.deleteQuote(parseInt(e.currentTarget.elements.id.value));
+    
     const navigate = useNavigate()
-    navigate('/myquotes')
+    // navigate('/myquotes')
   
   
     e.preventDefault();
@@ -63,7 +65,7 @@ const MyQuotes = (props:MyQuotesProps): JSX.Element => {
   <h1>My Quotes</h1>
   <main className={styles.container}>
   {quotes.map((myQuotes ) =>
-   <div key={myQuotes.id}><form onSubmit={handleDeleteQuote}>
+   <div key={myQuotes.id}><form onSubmit={handleEditQuote}>
       <label htmlFor="title-input">Quote:</label>
       <input
         required
@@ -71,15 +73,13 @@ const MyQuotes = (props:MyQuotesProps): JSX.Element => {
         name="quote"
         id="quote"
         defaultValue={myQuotes.quote}
-        // value={myQuotes.quote}
         />
         <input
         required
         type="hidden"
         name="id"
         id="id"
-        defaultValue={myQuotes.id}
-        // value={myQuotes.id}
+        value={myQuotes.id}
         />
         <button id="formButton" type="submit">UPDATE</button>
         </form>
@@ -89,10 +89,9 @@ const MyQuotes = (props:MyQuotesProps): JSX.Element => {
         type="hidden"
         name="id"
         id="id"
-        defaultValue={myQuotes.id}
-        // value={myQuotes.id}
+        value={myQuotes.id}
         />
-        <button>
+        <button type="submit">
         DELETE QUOTE
         </button>
         </form>

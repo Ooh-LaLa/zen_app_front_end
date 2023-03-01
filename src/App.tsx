@@ -81,26 +81,6 @@ function App(): JSX.Element {
     }
     if (user) MyQuotes()
   }, [user])
-
-
-  const handleAddQuote = async (quoteData: QuoteFormData): Promise<void> => {
-    const newQuote = await quoteService.create(quoteData)
-    setQuotes([newQuote, ...quotes])
-    navigate('/new')
-  }
-
-
-  const handleEditQuote = async (quoteData: QuoteFormData): Promise<void> => {
-    const updateQuote = await quoteService.editQuote(quoteData)
-    setQuotes(quotes.map((quotes) => quoteData.id === quotes.id ? updateQuote : quote))
-    navigate('/quotes')
-  }
-
-  const handleDeleteQuote = async (id:number): Promise<void> => {
-    await quoteService.deleteQuote(id)
-    setQuotes(quotes.filter(quote => quote.id !== id))
-    navigate('/quotes')
-  }
   
 
   return (

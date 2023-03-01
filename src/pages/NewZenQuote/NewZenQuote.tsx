@@ -37,6 +37,8 @@ interface FormElement extends HTMLFormElement {
 const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
   const newFormData = {quote: e.currentTarget.elements.quote.value}
   quoteService.create(newFormData);
+  const navigate = useNavigate()
+    navigate('/myquotes')
          
   e.preventDefault();
 }
