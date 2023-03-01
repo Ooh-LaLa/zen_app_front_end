@@ -24,7 +24,7 @@ import './App.css'
 
 // types
 import { User, Profile, Zen_Quote } from './types/models'
-
+import { QuoteFormData } from './types/forms'
 
 function App(): JSX.Element {
   const navigate = useNavigate()
@@ -71,7 +71,7 @@ function App(): JSX.Element {
   }, [user])
 
 
-  const handleAddQuote = async (quoteData:string) => {
+  const handleAddQuote = async (quoteData: QuoteFormData): Promise<void> => {
     const newQuote = await quoteService.create(quoteData)
     setQuotes([newQuote, ...quotes])
     navigate('/new')
@@ -80,7 +80,13 @@ function App(): JSX.Element {
 
   const handleEditQuote = async (quoteData: QuoteFormData): Promise<void> => {
     const updateQuote = await quoteService.editQuote(quoteData)
-    setQuotes([updateQuote, ...quotes])
+    setQuotes(quotes.map((quotes) => quoteData.id === quotes.id ? updateQuote : quote))
+    navigate('/quotes')
+  }
+
+  const handleDeleteQuote = async (id:number): Promise<void> => {
+    await quoteService.deleteQuote(id)
+    setQuotes(quotes.filter(quote => quote.id !== id))
     navigate('/quotes')
   }
 

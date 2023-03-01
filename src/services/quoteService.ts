@@ -3,7 +3,8 @@ import { Zen_Quote } from '../types/models'
 
 //services
 import * as tokenService from './tokenService'
-
+import { QuoteFormData } from '../types/forms'
+import { login } from './authService'
 
 
 
@@ -20,9 +21,9 @@ async function getAllQuotes(): Promise<Zen_Quote[]> {
   }
 }
 
-const create = async (quoteData:string) => {
-  try {
-    const res = await fetch(`${BASE_URL}/new`, {
+const create = async (quoteData:QuoteFormData): Promise<Quote> => {
+  try {    
+    const res = await fetch(BASE_URL, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
@@ -30,6 +31,8 @@ const create = async (quoteData:string) => {
       },
       body: JSON.stringify(quoteData)
     })
+    console.log(res);
+    
     return res.json()
   } catch (error) {
     console.log(error)

@@ -1,5 +1,11 @@
 /* ---------===== custom props ====--------- */
-
+export interface Quote {
+  quote: string;
+  profileId: number;
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+}
 
 
 /* ---------===== auth models =====--------- */

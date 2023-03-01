@@ -12,7 +12,7 @@ import * as quoteService from '../../services/quoteService'
 
 // types
 import { User, Profile, Zen_Quote } from '../../types/models'
-
+import { QuoteFormData } from '../../types/forms'
 
  
 
@@ -35,16 +35,13 @@ interface FormElement extends HTMLFormElement {
 
 
 const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
-      console.log(e.currentTarget.elements.quote.value, "This is working");
-          quoteService.create(e.currentTarget.elements.quote.value);
 
-
+      const newFormData = {quote: e.currentTarget.elements.quote.value}
+          quoteService.create(newFormData);
+         
       e.preventDefault();
-      console.log(e.currentTarget.elements.quote.value)
     }
 
-    
-   
     const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
 
     return (
@@ -57,7 +54,7 @@ const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
         <input
           required
           type="text"
-          name="title"
+          name="quote"
           id="quote"
           />
           </div>
@@ -70,7 +67,5 @@ const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
   
   
   
-  
-
 
 export default NewZenQuote
