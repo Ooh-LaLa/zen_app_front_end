@@ -23,7 +23,7 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             <NavLink className={styles.link} to="/account">Welcome, {user?.name}</NavLink>
             <NavLink className={styles.link} to="/">Home</NavLink>
             <NavLink className={styles.link} to="/new">Add Zen Quote</NavLink>
-            <NavLink className={styles.link} to="/edit/:id">My Zen Quotes</NavLink>
+            <NavLink className={styles.link} to="/myquotes">My Zen Quotes</NavLink>
           </div>
           <div className="navRight">
             <NavLink to="" onClick={handleLogout}>LOG OUT</NavLink>

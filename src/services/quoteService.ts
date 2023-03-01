@@ -22,7 +22,8 @@ async function getAllQuotes(): Promise<Zen_Quote[]> {
 }
 
 const create = async (quoteData:QuoteFormData): Promise<Quote> => {
-  try {    
+  try {
+    
     const res = await fetch(BASE_URL, {
       method: 'POST',
       headers: {
@@ -70,7 +71,20 @@ async function deleteQuote(id: number): Promise<void> {
   }
 }
 
-export { getAllQuotes, create, editQuote, deleteQuote }
+
+async function getMyQuotes(): Promise<Zen_Quote[]> {
+  try {
+    const res = await fetch(`${BASE_URL}/myquotes`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
+    })
+    return await res.json() as Zen_Quote[]
+  } catch (error) {
+    throw error
+  }
+}
+
+
+export { getAllQuotes, create, editQuote, deleteQuote, getMyQuotes}
 
 
 

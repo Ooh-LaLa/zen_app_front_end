@@ -25,6 +25,7 @@ interface NewZenQuoteProps {
 	user: User | null;
   quotes?: Zen_Quote[];
 }
+
 interface FormElements extends HTMLFormControlsCollection {
   quote: HTMLInputElement
 }
@@ -32,7 +33,6 @@ interface FormElements extends HTMLFormControlsCollection {
 interface FormElement extends HTMLFormElement {
  elements: FormElements
 }
-
 
 const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
 

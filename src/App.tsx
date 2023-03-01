@@ -9,7 +9,8 @@ import Landing from './pages/Landing/Landing'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Account from './pages/Accounts/Accounts'
 import NewZenQuote from './pages/NewZenQuote/NewZenQuote'
-import EditZenQuote from './pages/EditZenQuote/EditZenQuote'
+import EditZenQuote from './pages/MyQuotes/MyQuotes'
+import MyQuotes from './pages/MyQuotes/MyQuotes'
 
 // components
 import NavBar from './components/NavBar/NavLinkList'
@@ -32,6 +33,7 @@ function App(): JSX.Element {
   const [user, setUser] = useState<User | null>(authService.getUser())
   const [profiles, setProfiles] = useState<Profile[]>([])
   const [quotes, setQuotes] = useState<Zen_Quote[]>([])
+  const [myQuotes, setMyQuotes] = useState<Zen_Quote[]>([])
 
 
   useEffect((): void => {
@@ -61,13 +63,23 @@ function App(): JSX.Element {
       try {
         const quoteData: Zen_Quote[] = await quoteService.getAllQuotes()
         setQuotes(quoteData)
-        console.log(quotes, "LITTLE MESSAGE");
-        
       } catch (error) {
         console.log(error)
       }
     }
     if (user) fetchQuotes()
+  }, [user])
+
+  useEffect((): void => {
+    const MyQuotes = async (): Promise<void> => {
+      try {
+        const myQuoteData: Zen_Quote[] = await quoteService.getMyQuotes()
+        setMyQuotes(myQuoteData)      
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    if (user) MyQuotes()
   }, [user])
 
 
@@ -105,10 +117,8 @@ function App(): JSX.Element {
           path="/login"
           element={<Login handleAuthEvt={handleAuthEvt} />}
         />
-        <Route
-          path="/edit/id:"
-          element={<Login handleAuthEvt={handleAuthEvt} />}
-        />
+              <Route path="/myquotes" element={<ProtectedRoute user={user} > <MyQuotes quotes={myQuotes} user={user} /> </ProtectedRoute>}/>
+
    <Route path="/new" element={<ProtectedRoute user={user} > <NewZenQuote user={user} quotes={quotes}/> </ProtectedRoute>}/>
         <Route
           path="/change-password"
