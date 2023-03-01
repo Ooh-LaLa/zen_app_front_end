@@ -27,7 +27,7 @@ const create = async (quoteData: QuoteFormData): Promise<void> => {
         Authorization: `Bearer ${tokenService.getToken()}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(quoteData),
+      body: JSON.stringify(quoteData) 
     });
     console.log(res);
 
