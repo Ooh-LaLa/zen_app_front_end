@@ -40,9 +40,9 @@ const create = async (quoteData:QuoteFormData): Promise<Quote> => {
   }
 }
 
-async function editQuote(quoteData: QuoteFormData): Promise<void> {
+async function editQuote(quoteData: QuoteFormData, id:number): Promise<void> {
   try {
-    const res = await fetch(`${BASE_URL}/myquotes/edit`, {
+    const res = await fetch(`${BASE_URL}/myquotes/${id}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,

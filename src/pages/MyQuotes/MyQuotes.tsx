@@ -40,20 +40,19 @@ const MyQuotes = (props:MyQuotesProps): JSX.Element => {
   
   const handleEditQuote= (e: React.FormEvent<FormElement>) => {
     const newFormData = {quote: e.currentTarget.elements.quote.value}
-    e.preventDefault();
-    quoteService.create(newFormData);
+    quoteService.editQuote(newFormData, parseInt(e.currentTarget.elements.id.value))
     const navigate = useNavigate()
-    navigate('/myquotes')
-  
+    navigate("/myquotes")
+    e.preventDefault();
+    
     
   }
   
   const handleDeleteQuote= (e: React.FormEvent<FormElement>) => {
     console.log(e.currentTarget.elements.id.value);
     quoteService.deleteQuote(parseInt(e.currentTarget.elements.id.value));
-    
     const navigate = useNavigate()
-    // navigate('/myquotes')
+    navigate("/myquotes")
   
   
     e.preventDefault();
