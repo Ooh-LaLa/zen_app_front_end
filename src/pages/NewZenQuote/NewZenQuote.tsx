@@ -35,16 +35,14 @@ interface FormElement extends HTMLFormElement {
 }
 
 const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
-
-      const newFormData = {quote: e.currentTarget.elements.quote.value}
-          quoteService.create(newFormData);
+  const newFormData = {quote: e.currentTarget.elements.quote.value}
+  quoteService.create(newFormData);
          
-      e.preventDefault();
-    }
+  e.preventDefault();
+}
 
-    const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
-
-    return (
+const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
+  return (
     <> 
     <h1>New Zen Quote</h1>
     <main className={styles.container}>

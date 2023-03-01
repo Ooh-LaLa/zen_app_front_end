@@ -101,7 +101,7 @@ function App(): JSX.Element {
     setQuotes(quotes.filter(quote => quote.id !== id))
     navigate('/quotes')
   }
-
+  
 
   return (
     <>
