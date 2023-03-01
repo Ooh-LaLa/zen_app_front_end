@@ -29,3 +29,12 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.landing-h1 {
+  font-family: ;
+}
+
+img {
+  background-image: url("src/assets/succulent.jpg");
+
+}

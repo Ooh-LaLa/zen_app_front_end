@@ -33,6 +33,7 @@ const NavBar = (props: NavBarProps): JSX.Element => {
           <>
           <div className="navRight">
             <NavLink to="/login">Log In</NavLink>
+            <br></br>
             <NavLink to="/signup">Sign Up</NavLink>
           </div>
           </>
