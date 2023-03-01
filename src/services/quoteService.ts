@@ -19,7 +19,7 @@ async function getAllQuotes(): Promise<Zen_Quote[]> {
   }
 }
 
-const create = async (quoteData: QuoteFormData): Promise<Quote> => {
+const create = async (quoteData: QuoteFormData): Promise<void> => {
   try {
     const res = await fetch(BASE_URL, {
       method: "POST",
@@ -47,7 +47,7 @@ async function editQuote(quoteData: QuoteFormData, id: number): Promise<void> {
       },
       body: JSON.stringify(quoteData),
     });
-    return (await res.json()) as Quote;
+    return (await res.json()) 
   } catch (error) {
     throw error;
   }
