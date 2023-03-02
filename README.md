@@ -29,5 +29,5 @@
 
 ### Backlog
 - [ ] Sort zen quotes by a search category
-- [ ] Hear sound sounds when a quote is added
+- [ ] Hear sounds when a quote is added
 - [ ] See zen animations on homepage
