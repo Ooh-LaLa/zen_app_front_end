@@ -1,5 +1,5 @@
 
-### 🍃 Welcome to the zen quote app. Here, you will find little droplets of zen left by people who are practicing the art of mindfulness. Zen involves the contemplation of koans - riddles or paradoxes that are used to challenge the mind and break through conceptual thinking.    
+### 🍃 Welcome to Zen Quote App. Here, you will find little droplets of zen left by people who are practicing the art of mindfulness. Zen involves the contemplation of koans - riddles or paradoxes that are used to challenge the mind and break through conceptual thinking.    
 
 ### Use this app to share some zen thoughts with fellow practitioners aiming to cultivate awareness and attentiveness in their lives. This app intends to bring its users closer to achieving a state of mind free from ego, attachment and judgment, which leads to a path of greater insight, compassion and wisdom. Namaste. 🍃
 ---
@@ -27,7 +27,7 @@
 ![TypeScript](src/assets/tsbadge.svg)<br />
 ![PostgreSQL](src/assets/postsqlbadge.svg)<br />
 
-### Future Features
+### Backlog
 - [ ] Sort zen quotes by a search category
 - [ ] Hear sound sounds when a quote is added
 - [ ] See zen animations on homepage
