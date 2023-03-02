@@ -5,7 +5,7 @@
 # [Visit Zen Quote App](https://zen-quote-app.netlify.app)
 
 
-[Back-end repository](https://zen-quote-app.netlify.app)
+[Back-end repository](https://github.com/Ooh-LaLa/zen_app_back_end)
 
 
 ![main page](src/assets/screenshot.png) This will be updated soon.
