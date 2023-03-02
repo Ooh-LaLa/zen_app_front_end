@@ -1,5 +1,5 @@
 .newZenQuote_img {
-background: url("src/assets/mountain.jpg") no-repeat center center fixed; 
+background: url("/mountain.jpg") no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

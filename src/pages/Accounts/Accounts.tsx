@@ -22,8 +22,7 @@ const Account =  ({ user, handleLogout }: AccountProps): JSX.Element => {
   }
   return (
     <main className={styles.container}>
-    <img className=
-  {styles.accounts_img} src="/bee.jpg" alt="bee"/>
+    <img className={styles.accounts_img} src="/bee.jpg" alt="bee"/>
     <div className={styles.accounts_img}>
   
 

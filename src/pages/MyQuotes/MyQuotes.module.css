@@ -1,5 +1,5 @@
 .MyQuotes_img {
-background: url("src/assets/succulent.jpg") no-repeat center center fixed; 
+background: url("/succulent.jpg") no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

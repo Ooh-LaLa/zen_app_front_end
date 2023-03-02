@@ -27,6 +27,7 @@ if(!quotes?.length) return <p className={styles.landingNoQuotes}>No quotes yet</
 return(
   <>
   <main className={styles.landing_main}>
+  <img className={styles.landing_img} src="/pelican.jpg" alt="pelican"/>
   <div className={styles.landing_img}>
   <h1 className={styles.landing_h1}>Zen Quote App</h1>
     {quotes.map((currentQuote ) =>
