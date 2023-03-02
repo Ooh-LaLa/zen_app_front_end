@@ -8,7 +8,7 @@
 [Back-end repository](https://zen-quote-app.netlify.app)
 
 
-![main page]() This will be updated soon.
+![main page](src/assets/screenshot.png) This will be updated soon.
 
 
 ### Technologies Utilized
@@ -18,7 +18,9 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)<br />
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)<br />
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)<br />
-
+![Sequelize](src/assets/sequelizebadge.svg)<br />
+![TypeScript]](src/assets/tsbadge.svg)<br />
+![PostgreSQL](src/assets/postsqlbadge.svg<br />
 
 ### Icebox Features
 - [ ] Sort zen quotes by a search category

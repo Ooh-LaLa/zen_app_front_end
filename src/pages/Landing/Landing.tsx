@@ -26,12 +26,14 @@ if(!quotes?.length) return <p>No quotes yet</p>
 
 return(
   <>
+  <main className={styles.landing_main}>
   <div className={styles.landing_img}>
-  <h1 className="landing-h1">Zen Quote App</h1>
+  <h1 className={styles.landing_h1}>Zen Quote App</h1>
     {quotes.map((currentQuote ) =>
       <p key={currentQuote.id}>{currentQuote.quote}</p>
     )}
     </div>
+    </main>
   </>
   )
   }

@@ -47,10 +47,10 @@ const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
   return (
     <div className={styles.newZenQuote_img}>
     <> 
-    <h1>New Zen Quote</h1>
+    <h1 className={styles.NewZenQuote_h1}>New Zen Quote</h1>
     <main className={styles.container}>
-      <form onSubmit={handleFormSubmit}>
-        <div>
+      <form className={styles.NewZenQuoteForm} onSubmit={handleFormSubmit}>
+        <div className={styles.NewZenQuoteForm}>
         <label htmlFor="title-input">Add Zen Quote:</label>
         <input
           required
@@ -59,7 +59,7 @@ const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
           id="quote"
           />
           </div>
-          <button id="formButton" type="submit">SUBMIT</button>
+          <button className={styles.NewZenQuoteBtn} id="formButton" type="submit">SUBMIT</button>
           </form>
           </main>
     </>

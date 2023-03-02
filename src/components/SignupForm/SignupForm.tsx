@@ -111,15 +111,15 @@ const SignupForm = (props: AuthFormProps): JSX.Element => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="photo-upload" className={styles.label}>
+        {/* <label htmlFor="photo-upload" className={styles.label}>
           Upload Photo
-        </label>
+        </label> */}
         <input
-          type="file"
+          type="hidden"
           id="photo-upload"
           name="photo"
           onChange={handleChangePhoto}
-        />
+        /> 
       </div>
       <div className={styles.inputContainer}>
         <button 

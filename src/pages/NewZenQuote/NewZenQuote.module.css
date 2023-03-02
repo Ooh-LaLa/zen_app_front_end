@@ -10,3 +10,10 @@ height: 100%;
 width: 100%;
 position: fixed;
 }
+
+.NewZenQuote_h1, .NewZenQuoteForm, .NewZenQuoteBtn {
+display: flex;
+justify-content: center;
+color: red;
+text-align: center;
+}

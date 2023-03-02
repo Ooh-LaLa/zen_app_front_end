@@ -30,7 +30,7 @@ interface FormElement extends HTMLFormElement {
 const MyQuotes = (props: MyQuotesProps): JSX.Element => {
   const { quotes } = props;
 
-  if (!quotes?.length) return <p>No quotes yet</p>;
+  if (!quotes?.length) return <p className={styles.MyQuotes_p}>No quotes yet</p>;
 
   const handleEditQuote = (e: React.FormEvent<FormElement>) => {
     const newFormData = { quote: e.currentTarget.elements.quote.value };
@@ -53,9 +53,9 @@ const MyQuotes = (props: MyQuotesProps): JSX.Element => {
   };
 
   return (
-      <div className={styles.myQuotes_img}>
+      <div className={styles.MyQuotes_img}>
     <>
-      <h1>My Quotes</h1>
+      <h1 className={styles.MyQuotes_h1}>My Quotes</h1>
       <main  className={styles.container}>
         {quotes.map((myQuotes) => (
           <div key={myQuotes.id}>
