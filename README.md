@@ -1,14 +1,19 @@
 
-### Welcome to the zen quote app. Here, you will find little droplets of zen left by people who are practicing the art of mindfulness. Zen involves the contemplation of koans (riddles or paradoxes that are used to challenge the mind and break through conceptual thinking). Use this app to share some zen thoughts with fellow practitioners aiming to cultivate awareness and attentiveness in their lives. This app intends to bring its users closer to achieving a state of mind free from ego, attachment and judgment, which leads to a path of greater insight, compassion and wisdom. Namaste.
+### Welcome to the zen quote app. Here, you will find little droplets of zen left by people who are practicing the art of mindfulness. Zen involves the contemplation of koans - riddles or paradoxes that are used to challenge the mind and break through conceptual thinking.    
+
+Use this app to share some zen thoughts with fellow practitioners aiming to cultivate awareness and attentiveness in their lives. This app intends to bring its users closer to achieving a state of mind free from ego, attachment and judgment, which leads to a path of greater insight, compassion and wisdom. Namaste.
 ---
 
 # [Visit Zen Quote App](https://zen-quote-app.netlify.app)
 
 
-[Back-end repository](https://github.com/Ooh-LaLa/zen_app_back_end)
+
+#[See back-end repository](https://github.com/Ooh-LaLa/zen_app_back_end)
 
 
-![main page](src/assets/screenshot.png) This will be updated soon.
+
+![A glimpse of Zen Quote App](src/assets/screenshot.png) 
+
 
 
 ### Technologies Utilized
