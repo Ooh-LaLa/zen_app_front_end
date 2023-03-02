@@ -22,7 +22,7 @@ interface LandingProps {
 const Landing = (props:LandingProps): JSX.Element => {
 const {quotes} = props  
   
-if(!quotes?.length) return <p>No quotes yet</p>
+if(!quotes?.length) return <p className={styles.landingNoQuotes}>No quotes yet</p>
 
 return(
   <>
