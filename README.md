@@ -27,7 +27,7 @@
 ![TypeScript](src/assets/tsbadge.svg)<br />
 ![PostgreSQL](src/assets/postsqlbadge.svg)<br />
 
-### Icebox Features
+### Future Features
 - [ ] Sort zen quotes by a search category
 - [ ] Hear sound sounds when a quote is added
 - [ ] See zen animations on homepage
