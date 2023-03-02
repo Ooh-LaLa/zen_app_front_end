@@ -45,6 +45,7 @@ const handleFormSubmit = (e: React.FormEvent<FormElement>) => {
 
 const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
   return (
+    <div className={styles.newZenQuote_img}>
     <> 
     <h1>New Zen Quote</h1>
     <main className={styles.container}>
@@ -62,6 +63,7 @@ const NewZenQuote = (props:NewZenQuoteProps): JSX.Element => {
           </form>
           </main>
     </>
+          </div>
     )
   }
   

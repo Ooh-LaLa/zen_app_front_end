@@ -22,6 +22,8 @@ const Account =  ({ user, handleLogout }: AccountProps): JSX.Element => {
   }
   return (
     <main className={styles.container}>
+    <div className={styles.accounts_img}>
+
       <h1>hello, {user ? user.name : 'zen master'}</h1>
 
       <a href="/change-password">Change Password</a>
@@ -32,6 +34,7 @@ const Account =  ({ user, handleLogout }: AccountProps): JSX.Element => {
           DELETE ACCOUNT
         </button>
       }
+      </div>
     </main>
   )
 }

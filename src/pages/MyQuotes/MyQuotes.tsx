@@ -53,9 +53,10 @@ const MyQuotes = (props: MyQuotesProps): JSX.Element => {
   };
 
   return (
+      <div className={styles.myQuotes_img}>
     <>
       <h1>My Quotes</h1>
-      <main className={styles.container}>
+      <main  className={styles.container}>
         {quotes.map((myQuotes) => (
           <div key={myQuotes.id}>
             <form onSubmit={handleEditQuote}>
@@ -92,6 +93,7 @@ const MyQuotes = (props: MyQuotesProps): JSX.Element => {
         ))}
       </main>
     </>
+        </div>
   );
 };
 
