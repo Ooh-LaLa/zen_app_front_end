@@ -19,8 +19,8 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)<br />
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)<br />
 ![Sequelize](src/assets/sequelizebadge.svg)<br />
-![TypeScript]](src/assets/tsbadge.svg)<br />
-![PostgreSQL](src/assets/postsqlbadge.svg<br />
+![TypeScript](src/assets/tsbadge.svg)<br />
+![PostgreSQL](src/assets/postsqlbadge.svg)<br />
 
 ### Icebox Features
 - [ ] Sort zen quotes by a search category
