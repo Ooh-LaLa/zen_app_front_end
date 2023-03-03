@@ -59,7 +59,7 @@ const MyQuotes = (props: MyQuotesProps): JSX.Element => {
       <main  className={styles.container}>
         {quotes.map((myQuotes) => (
           <div key={myQuotes.id}>
-            <form onSubmit={handleEditQuote}>
+            <form className={styles.myQuotesForm} onSubmit={handleEditQuote}>
               <label htmlFor="title-input">Quote:</label>
               <input
                 required
@@ -75,11 +75,11 @@ const MyQuotes = (props: MyQuotesProps): JSX.Element => {
                 id="id"
                 value={myQuotes.id}
               />
-              <button id="formButton" type="submit">
+              <button className={styles.myQuotesBtn} id="formButton" type="submit">
                 UPDATE
               </button>
             </form>
-            <form onSubmit={handleDeleteQuote}>
+            <form className={styles.myQuotesForm} onSubmit={handleDeleteQuote}>
               <input
                 required
                 type="hidden"
@@ -87,7 +87,7 @@ const MyQuotes = (props: MyQuotesProps): JSX.Element => {
                 id="id"
                 value={myQuotes.id}
               />
-              <button type="submit">DELETE QUOTE</button>
+              <button className={styles.myQuotesBtn} type="submit">DELETE QUOTE</button>
             </form>
           </div>
         ))}
