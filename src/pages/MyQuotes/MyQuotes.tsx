@@ -30,7 +30,7 @@ interface FormElement extends HTMLFormElement {
 const MyQuotes = (props: MyQuotesProps): JSX.Element => {
   const { quotes } = props;
 
-  if (!quotes?.length) return <p className={styles.MyQuotes_p}>No quotes yet</p>;
+  if (!quotes?.length) return <p className={styles.MyQuotes_p}>No quotes yet</p>
 
   const handleEditQuote = (e: React.FormEvent<FormElement>) => {
     const newFormData = { quote: e.currentTarget.elements.quote.value };
