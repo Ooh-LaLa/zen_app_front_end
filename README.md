@@ -23,11 +23,12 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)<br />
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)<br />
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)<br />
-![Sequelize](src/assets/sequelizebadge.svg)<br />
+![VSC](src/assets/vsc_badge.svg)<br />
 ![TypeScript](src/assets/tsbadge.svg)<br />
 ![PostgreSQL](src/assets/postsqlbadge.svg)<br />
+![Postman](src/assets/postman_badge.svg)<br >
 
 ### Backlog
-- [ ] Sort zen quotes by a search category
+- [ ] Sort zen quotes by search category
 - [ ] Hear sounds when a quote is added
 - [ ] See zen animations on homepage
