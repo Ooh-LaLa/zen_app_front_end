@@ -26,7 +26,7 @@ const Account =  ({ user, handleLogout }: AccountProps): JSX.Element => {
     <div className={styles.accounts_img}>
   
 
-      <h1 className={styles.accounts_h1}>hello, {user ? user.name : 'zen master'}</h1>
+      <h1 className={styles.accounts_h1}>Namaste, {user ? user.name : 'zen master'}</h1>
 
       <a href="/change-password" className={styles.accountsPw}>Change Password</a>
 <br></br>
