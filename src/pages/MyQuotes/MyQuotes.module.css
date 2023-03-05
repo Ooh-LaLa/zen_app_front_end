@@ -11,7 +11,8 @@
   position: fixed;
 }
 
-.MyQuotes_h1, .MyQuotes_p {
+.MyQuotes_h1,
+.MyQuotes_p {
   display: flex;
   justify-content: center;
 }
@@ -20,26 +21,63 @@
   font-size: larger;
 }
 
-.myQuotesBtn, .myQuotesForm, .MyQuotes_h1 {
+.myQuotesFormA {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-right: 5%;
+  padding-bottom: 12px;
+  flex: 1 0 0;
+  flex-grow: 1;
 }
 
+.myQuotesFormB {
+  display: flex;
+  padding-bottom: 12px;
+  flex: 1 0 0;
+  flex-grow: 0;
+}
+
+ 
 
 .myQuotesBtn {
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    background-color: white;
-    border-radius: 4px;
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(43, 108, 176);
-    border: 1px solid rgb(66, 153, 225);
-    line-height: 26px;
+  display: flex;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px; 
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(43, 108, 176);
+  border: 1px solid rgb(66, 153, 225);
+  line-height: 26px;
+} 
 
+.formDiv {
+  display: flex;
+  justify-content: center;
+  flex: 1 0 0;
+  flex-grow: 0;
+}
+
+.quote_input {
+  width: 100px ;
+  display: flex;
+  flex-grow: 0;
+  flex: 1 0 0;
+}
+
+.myQuotesDeleteBtn {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px; 
+   padding: 8px 16px; 
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(43, 108, 176);
+  border: 1px solid rgb(66, 153, 225);
+  line-height: 26px;
+  /* flex: 1 1 0;
+  flex-grow: 1; */
 }
